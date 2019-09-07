@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>아토믹 컴포넌트</title>
+    <meta name="description" content="빠른 적용을 위한 문서">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    
+    <link rel="preload" href="/assets/css/0.styles.068922d8.css" as="style"><link rel="preload" href="/assets/js/app.69b82997.js" as="script"><link rel="preload" href="/assets/js/2.c7adcf1a.js" as="script"><link rel="preload" href="/assets/js/7.20c2c6ca.js" as="script"><link rel="prefetch" href="/assets/js/3.3d282e22.js"><link rel="prefetch" href="/assets/js/4.621d4372.js"><link rel="prefetch" href="/assets/js/5.ce7897dd.js"><link rel="prefetch" href="/assets/js/6.c98cbb0e.js"><link rel="prefetch" href="/assets/js/8.fdd58454.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.068922d8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">아토믹 컴포넌트</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">HOME</a></div><div class="nav-item"><a href="/guide/" class="nav-link">가이드</a></div><div class="nav-item"><a href="/examples/" class="nav-link">예시</a></div><div class="nav-item"><a href="/grids/" class="nav-link">그리드</a></div><div class="nav-item"><a href="/components/" class="nav-link router-link-active">컴포넌트</a></div><div class="nav-item"><a href="/mixins/" class="nav-link">믹스인</a></div><div class="nav-item"><a href="/api/" class="nav-link">API</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">HOME</a></div><div class="nav-item"><a href="/guide/" class="nav-link">가이드</a></div><div class="nav-item"><a href="/examples/" class="nav-link">예시</a></div><div class="nav-item"><a href="/grids/" class="nav-link">그리드</a></div><div class="nav-item"><a href="/components/" class="nav-link router-link-active">컴포넌트</a></div><div class="nav-item"><a href="/mixins/" class="nav-link">믹스인</a></div><div class="nav-item"><a href="/api/" class="nav-link">API</a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/components/GridBlocks.html" class="active sidebar-link">/components/GridBlocks.html</a></li><li><a href="/components/" class="sidebar-link">설명</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><p>#GridBlocks</p> <p>설명
+##코드</p> <div class="language-HTML extra-class"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>grid-block-container<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>grid-block box-shadow<span class="token punctuation">&quot;</span></span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>block in blocks<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>block.id<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>img<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>block.imgSrc<span class="token punctuation">&quot;</span></span> <span class="token attr-name">alt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span><span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>heading<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{block.heading}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>text<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>{{block.text}}<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token operator">&lt;</span>script<span class="token operator">&gt;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> molecule <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'@/assets/vueMixins/localMixins'</span><span class="token punctuation">;</span>
+
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>
+  mixins<span class="token punctuation">:</span> <span class="token punctuation">[</span>molecule<span class="token punctuation">]</span><span class="token punctuation">,</span>
+  props<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    blocks<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      type<span class="token punctuation">:</span> Array<span class="token punctuation">,</span>
+      <span class="token function-variable function">default</span><span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">return</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">{</span> id<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span> heading<span class="token punctuation">:</span> <span class="token string">&quot;heading&quot;</span><span class="token punctuation">,</span> text<span class="token punctuation">:</span> <span class="token string">&quot;text&quot;</span><span class="token punctuation">,</span> imgSrc<span class="token punctuation">:</span> <span class="token string">&quot;~/assets/img/avatar.png&quot;</span> <span class="token punctuation">}</span>
+        <span class="token punctuation">]</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  computed<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+</code></pre></div><div class="language-SCSS extra-class"><pre class="language-scss"><code><span class="token selector">&lt;style lang=&quot;scss&quot; scoped&gt;
+.grid-block-container </span><span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 90%<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
+  <span class="token property">grid-template-columns</span><span class="token punctuation">:</span> <span class="token function">repeat</span><span class="token punctuation">(</span>3<span class="token punctuation">,</span> 1fr<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">grid-gap</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
+
+  <span class="token selector">.grid-block </span><span class="token punctuation">{</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+    <span class="token property">flex-flow</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+    <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+    <span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span> 
+    <span class="token property">padding</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+
+    <span class="token selector">.img </span><span class="token punctuation">{</span>
+      <span class="token property">width</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.heading </span><span class="token punctuation">{</span>
+      <span class="token property">font-size</span><span class="token punctuation">:</span> 24px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token selector">.text </span><span class="token punctuation">{</span>
+      <span class="token property">font-size</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.box-shadow </span><span class="token punctuation">{</span>
+  <span class="token keyword">@include</span> block-shadow<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+&lt;/style&gt;
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/components/" class="router-link-active">
+          설명
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.69b82997.js" defer></script><script src="/assets/js/2.c7adcf1a.js" defer></script><script src="/assets/js/7.20c2c6ca.js" defer></script>
+  </body>
+</html>
