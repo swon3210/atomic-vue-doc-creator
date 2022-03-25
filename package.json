@@ -23,7 +23,7 @@
     "@mdi/font": "^3.8.95",
     "@vue/cli-plugin-babel": "^3.9.0",
     "@vue/cli-service": "^3.9.0",
-    "electron": "^5.0.0",
+    "electron": "^13.6.6",
     "node-sass": "^4.9.0",
     "sass": "^1.17.4",
     "sass-loader": "^7.1.0",
